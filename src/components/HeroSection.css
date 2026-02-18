@@ -1,0 +1,184 @@
+.hero-section {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    padding-top: 180px;
+}
+
+.hero-content {
+    animation: fadeInUp 1.5s ease-out;
+    max-width: 700px;
+}
+
+/* Decoration */
+.hero-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 2s ease-out;
+}
+
+.deco-star {
+    color: var(--color-gold);
+    font-size: 1.2rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.deco-line {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+}
+
+.deco-diamond {
+    color: var(--color-red);
+    font-size: 0.8rem;
+    animation: pulse 2s ease-in-out infinite 0.5s;
+}
+
+/* Subtitle top */
+.hero-subtitle-top {
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-out 0.3s both;
+}
+
+/* Main Title */
+.hero-title {
+    font-family: var(--font-heading);
+    margin-bottom: 1.5rem;
+}
+
+.title-line {
+    display: block;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    animation: fadeInUp 1.5s ease-out 0.5s both;
+}
+
+.title-main {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--color-gold), #fff, var(--color-gold), var(--color-orange));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1.5s ease-out 0.7s both, shimmer 4s linear infinite;
+    filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.3));
+}
+
+.title-year {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 15vw, 10rem);
+    font-weight: 900;
+    background: linear-gradient(180deg, var(--color-gold) 0%, var(--color-orange) 50%, var(--color-red) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    animation: fadeInUp 1.5s ease-out 0.9s both, glow 3s ease-in-out infinite;
+    filter: drop-shadow(0 4px 30px rgba(255, 165, 0, 0.4));
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.5s ease-out 1.1s both;
+}
+
+/* Chinese/Vietnamese wish characters */
+.hero-wishes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.5s ease-out 1.3s both;
+}
+
+.wish-char {
+    font-size: 2.5rem;
+    color: var(--color-gold);
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+}
+
+.wish-char:nth-child(2) {
+    animation-delay: 0.5s;
+    color: var(--color-red);
+    text-shadow: 0 0 15px rgba(212, 33, 61, 0.5);
+}
+
+.wish-char:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.wish-char::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, currentColor, transparent);
+    opacity: 0.5;
+}
+
+/* Message */
+.hero-message {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+    animation: fadeInUp 1.5s ease-out 1.5s both;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    animation: fadeInUp 1.5s ease-out 2s both;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.scroll-indicator span {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.scroll-arrow {
+    font-size: 1.2rem;
+    color: var(--color-gold);
+    animation: bounce 2s infinite;
+    position: relative;
+    left: 50%;
+}

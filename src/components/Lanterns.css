@@ -1,0 +1,124 @@
+.lanterns-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    z-index: 4;
+}
+
+.lantern {
+    position: absolute;
+    top: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: lanternSwing ease-in-out infinite;
+    transform-origin: top center;
+    will-change: transform;
+}
+
+.lantern-string {
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 215, 0, 0.6);
+}
+
+.lantern-cap {
+    width: 60%;
+    height: 6px;
+    border-radius: 2px 2px 0 0;
+    background: linear-gradient(to right, #c4941d, #ffd700, #c4941d);
+}
+
+.lantern-body {
+    width: 100%;
+    aspect-ratio: 0.7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.lantern-red .lantern-body {
+    background: radial-gradient(ellipse at 40% 40%, #ff3333, #cc0000 50%, #8b0000);
+    box-shadow: 0 0 20px rgba(255, 50, 50, 0.6), 0 0 40px rgba(255, 50, 50, 0.3), inset 0 0 15px rgba(255, 100, 100, 0.3);
+}
+
+.lantern-gold .lantern-body {
+    background: radial-gradient(ellipse at 40% 40%, #ffd700, #daa520 50%, #b8860b);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.3), inset 0 0 15px rgba(255, 235, 100, 0.3);
+}
+
+.lantern-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.lantern-red .lantern-glow {
+    background: radial-gradient(circle, rgba(255, 100, 100, 0.4), transparent);
+}
+
+.lantern-gold .lantern-glow {
+    background: radial-gradient(circle, rgba(255, 235, 150, 0.4), transparent);
+}
+
+.lantern-text {
+    font-size: 1.2em;
+    font-weight: 900;
+    z-index: 1;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.lantern-red .lantern-text {
+    color: #ffd700;
+}
+
+.lantern-gold .lantern-text {
+    color: #8b0000;
+}
+
+.lantern-bottom {
+    width: 40%;
+    height: 5px;
+    border-radius: 0 0 2px 2px;
+    background: linear-gradient(to right, #c4941d, #ffd700, #c4941d);
+}
+
+.lantern-tassel {
+    width: 2px;
+    height: 18px;
+    position: relative;
+}
+
+.lantern-red .lantern-tassel {
+    background: linear-gradient(to bottom, #ffd700, #ff6600);
+}
+
+.lantern-gold .lantern-tassel {
+    background: linear-gradient(to bottom, #b8860b, #8b0000);
+}
+
+.lantern-tassel::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.lantern-red .lantern-tassel::after {
+    background: #ffd700;
+}
+
+.lantern-gold .lantern-tassel::after {
+    background: #8b0000;
+}

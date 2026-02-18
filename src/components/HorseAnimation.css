@@ -1,0 +1,69 @@
+.horse-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 4;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.horse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 850px;
+    height: auto;
+    opacity: 0.4;
+    filter: drop-shadow(0 0 40px rgba(212, 33, 61, 0.3));
+    animation: horseBreath 4s ease-in-out infinite;
+}
+
+.horse-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    animation: horseGlow 3s ease-in-out infinite alternate;
+}
+
+/* Subtle breathing / bobbing animation */
+@keyframes horseBreath {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1) translateY(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.03) translateY(-8px);
+    }
+}
+
+/* Subtle glow pulsing on the image */
+@keyframes horseGlow {
+    0% {
+        filter: drop-shadow(0 0 15px rgba(212, 33, 61, 0.2)) brightness(1);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 30px rgba(255, 107, 53, 0.35)) brightness(1.08);
+    }
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+    .horse {
+        width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .horse {
+        width: 200px;
+    }
+}

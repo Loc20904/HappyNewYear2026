@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600&family=Great+Vibes&display=swap');
+
+:root {
+  /* Vietnamese New Year Palette */
+  --color-red: #D4213D;
+  --color-red-deep: #8B0000;
+  --color-gold: #FFD700;
+  --color-gold-light: #FFF8DC;
+  --color-orange: #FF6B35;
+  --color-peach: #FFB7B2;
+  --color-night-sky: #0A0E27;
+  --color-night-mid: #141832;
+  --color-night-light: #1E2448;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-night-sky);
+  color: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ======= Global Keyframes ======= */
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3), 0 0 40px rgba(255, 215, 0, 0.1); }
+  50% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.5), 0 0 80px rgba(255, 215, 0, 0.2); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes sakuraFall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(100px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sakuraFallReverse {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(-80px) rotate(-540deg);
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+@keyframes lanternSwing {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes dragonMove {
+  0% { transform: translateX(-120%) translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  50% { transform: translateX(50%) translateY(-30px); opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(120vw) translateY(10px); opacity: 0; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-12px) translateX(-50%); }
+  60% { transform: translateY(-6px) translateX(-50%); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-night-sky);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-red);
+  border-radius: 3px;
+}

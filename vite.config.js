@@ -5,3 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 })
+
+export default defineConfig({
+  base: "/HappyNewYear2026/",   // ví dụ: "/HappyNewYear2026/"
+});
+
